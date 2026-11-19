@@ -1,0 +1,109 @@
+# ─── OS ───────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ─── Editors / IDEs ──────────────────────────────────
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.code-workspace
+.fleet/
+.zed/
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-*
+
+# ─── Rust ────────────────────────────────────────────
+target/
+**/*.rs.bk
+*.pdb
+# Cargo.lock is committed (these are applications, not libraries)
+
+# ─── Tauri ───────────────────────────────────────────
+# Generated capability schemas
+**/src-tauri/gen/schemas/
+# Bundled installers / build artifacts
+**/src-tauri/target/
+*.AppImage
+*.deb
+*.rpm
+*.dmg
+*.msi
+
+# ─── Node / Vite ─────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+.npm/
+.eslintcache
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ─── macOS app (Swift / Xcode) ───────────────────────
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+.build/
+.swiftpm/
+Pods/
+Carthage/Build/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# ─── Logs / temp ─────────────────────────────────────
+logs/
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+coverage/
+
+# ─── Secrets / local config ──────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
+*.keystore
+*.jks
+# Tauri updater signing keys
+**/tauri-signing*
