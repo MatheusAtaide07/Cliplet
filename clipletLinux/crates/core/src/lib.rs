@@ -1,14 +1,15 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! Shared code for the Linux capture daemon and the Tauri app:
+//! where the data lives, the local SQLite schema and how copied content is classified.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub mod classify;
+pub mod db;
+pub mod hash;
+pub mod paths;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+/// Current time in epoch milliseconds, the unit every timestamp column uses.
+pub fn now_ms() -> i64 {
+    std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_millis() as i64)
+        .unwrap_or(0)
 }
